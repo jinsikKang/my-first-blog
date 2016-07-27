@@ -1,3 +1,4 @@
+#_*_coding:utf-8_*_
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
