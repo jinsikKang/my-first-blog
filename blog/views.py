@@ -11,8 +11,8 @@ def post_list(request):
 
 def write_post(request):
     me = User.objects.get(username='jskang')
-    title = request.GET['title' ]
-    text  = request.GET['text'  ]
+    title = request.GET['title']
+    text  = request.GET['text' ]
     post = Post.objects.create(author=me, title=title, text=text)
     post.publish()
     return render(request, 'blog/post_list.html', {})
